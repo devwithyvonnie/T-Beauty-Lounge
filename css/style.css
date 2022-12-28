@@ -375,7 +375,7 @@ h1, .h1 {
 
 @media (max-width: 1200px) {
   h1, .h1 {
-    font-size: calc(1.375rem + 1.5vw) ;
+    font-size: calc(1.2rem + 1.5vw) ;
   }
 }
 
@@ -3486,7 +3486,7 @@ input[type="button"].btn-block {
   display: block;
   min-height: 1.5rem;
   padding-left: 1.5rem;
-  color-adjust: exact;
+  print-color-adjust: exact;
 }
 
 .custom-control-inline {
@@ -9706,7 +9706,7 @@ h6,
   list-style-type: none;
 }
 
-                              /* Service Pricing */
+/* Service Pricing */
 
 .menu-section {
   margin: 0 auto;
@@ -9876,7 +9876,9 @@ p.menu-list__item-desc+span.dots {
     float: none;
     width: 100%;
     max-width:95%;
+    padding-left: 20px;
   }
+  
 }
 
 #column {
@@ -10164,5 +10166,67 @@ margin-left: 20px;
     float:none;
     margin-top:20px;
     text-align:right
+  }
+}
+
+/* CONTACT PAGE */
+.contacts-container .middle{
+    top:0px;
+    left:0px;
+    width: 100%;
+    height: 100%;
+    padding:100px 100px 150px 150px;
+    background: #DBECF4;
+    opacity: .8;
+}
+.btn-icon {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  background: #f1f1f1;
+  margin: 10px;
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: #3498db;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+.btn-icon i {
+  line-height: 90px;
+  font-size: 26px;
+  transition: 0.2s linear;
+}
+.btn-icon:hover i {
+  transform: scale(1.3);
+  color: #f1f1f1;
+}
+.btn-icon::before {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #194965;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+.btn-icon:hover::before {
+  animation: flash 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+@keyframes flash {
+  0% {
+    left: -100%;
+    top: 90%;
+  }
+  50% {
+    left: 10%;
+    top: -30%;
+  }
+  100% {
+    left: -10%;
+    top: -10%;
   }
 }
